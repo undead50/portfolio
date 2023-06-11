@@ -2,7 +2,7 @@ import React from 'react';
 import Carousel from 'react-material-ui-carousel'
 import { Paper } from '@mui/material'
 import './index.css'
-
+import Container from '@mui/material/Container';
 
 function Slider() {
     var items = [
@@ -17,11 +17,13 @@ function Slider() {
             image: "https://images.pexels.com/photos/12050940/pexels-photo-12050940.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         }
     ]
-    return (<Carousel>
+    return (
+        <Container maxWidth="sm">
+    <Carousel>
         {
             items.map( (item, i) => <Item key={i} item={item} /> )
         }
-    </Carousel>  );
+    </Carousel> </Container> );
 }
 
 function Item(props)
