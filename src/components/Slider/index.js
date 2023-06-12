@@ -2,9 +2,14 @@ import React from 'react';
 import Carousel from 'react-material-ui-carousel'
 import { Paper } from '@mui/material'
 import './index.css'
-import Container from '@mui/material/Container';
+import { Grid } from '@mui/material';
+import { Box
 
+} from '@mui/material';
 function Slider() {
+    const carouselStyle = {
+        width: '10%',
+      };
     var items = [
         {
             name: "Random Name #1",
@@ -18,12 +23,20 @@ function Slider() {
         }
     ]
     return (
-        <Container maxWidth="sm">
+    <Box sx={{
+        display:'flex',
+        bgcolor:'#F6F8FA',
+    }}>    
+    <Grid container spacing={1}>
+    <Grid item lg={12} md={12} className='hidden' >  
     <Carousel>
         {
             items.map( (item, i) => <Item key={i} item={item} /> )
         }
-    </Carousel> </Container> );
+    </Carousel>
+    </Grid>  
+    </Grid>
+    </Box>);
 }
 
 function Item(props)

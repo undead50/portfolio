@@ -1,15 +1,25 @@
 .container {
   width: 2000px; /* Adjust the width and height to your desired values */
   height: 400px;
-  position: relative;
-  overflow: hidden;
-  }
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+}
+  
 
   .container img {
-    width: 100%;
+  width: 100%;
   height: 100%;
-  object-fit: cover;
-  position: absolute;
+  object-fit:cover;
+  position:absolute;
   top: 0;
   left: 0;
+  }
+
+  @media (max-width: 600px) {
+    .hidden {
+      display: none;
+    }
   }
