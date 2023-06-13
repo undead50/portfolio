@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import { Container } from "@mui/material";
 function MyRoutes() {
     return (
+      
       <BrowserRouter>
         <Navbar/>
         <Slider/>    

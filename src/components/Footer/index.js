@@ -23,8 +23,9 @@ const defaultTheme = createTheme();
 
 export default function Footer() {
   return (
-     <Box sx={{ bgcolor: 'background.paper', p: 3,backgroundColor:'#001E3C',color:'white'}} component="footer">
-     <Typography variant="h6" align="center" gutterBottom>
+    <Container maxWidth={false} disableGutters={true} sx={{backgroundColor:'#001E3C'}}>
+     <Box >
+     <Typography variant="h6" align="center" sx={{color:"white"}}>
        Footer
      </Typography>
      <Typography
@@ -37,5 +38,6 @@ export default function Footer() {
      </Typography>
      <Copyright />
    </Box>
+   </Container>
   );
 }
