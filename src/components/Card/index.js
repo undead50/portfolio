@@ -31,7 +31,7 @@ function CardBar() {
         id: 4,
         name: "Random Name #4",
         description: "Probably the most random thing you have ever seen!",
-        image: "https://images.pexels.com/photos/12050940/pexels-photo-12050940.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        image: "https://images.pexels.com/photos/811838/pexels-photo-811838.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
     }
    ]
 

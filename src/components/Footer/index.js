@@ -23,8 +23,8 @@ const defaultTheme = createTheme();
 
 export default function Footer() {
   return (
-    <Container maxWidth={false} disableGutters={true} sx={{backgroundColor:'#001E3C'}}>
-     <Box >
+    <Container maxWidth={false}  disableGutters={true} sx={{backgroundColor:'#001E3C'}}>
+     <Box p = {6}>
      <Typography variant="h6" align="center" sx={{color:"white"}}>
        Footer
      </Typography>

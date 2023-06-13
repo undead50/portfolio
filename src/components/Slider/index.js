@@ -29,7 +29,7 @@ function Slider() {
     }}>    
     <Grid container spacing={1}>
     <Grid item lg={12} md={12} className='hidden' >  
-    <Carousel>
+    <Carousel animation = "fade" fullHeightHover = {true}>
         {
             items.map( (item, i) => <Item key={i} item={item} /> )
         }
@@ -42,11 +42,19 @@ function Slider() {
 function Item(props)
 {
     return (
-        <Paper>
+        <Paper sx={{color:'white'}}>
             {/* <h2>{props.item.name}</h2> */}
             <div className='container'>
-            <img src={props.item.image} alt={props.item.name}></img>
+                <img src={props.item.image} alt={props.item.name}></img>
+                <div class="hero-text">
+                <div className='slider-content-head'>Welcome To Racer X</div>
+                <div class="hero-subtitle">2023</div>
+                <button class="hero-button" onClick={()=>{
+                    alert('button clicked')
+                }}>Click Me</button>
+                </div>
             </div>
+            
             
             {/* <p>{props.item.description}</p> */}
         </Paper>
