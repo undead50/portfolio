@@ -5,7 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
-import { Box } from '@mui/material';
+import { Box,Paper,Container } from '@mui/material';
 
 function CardBar() {
 
@@ -32,37 +32,55 @@ function CardBar() {
         name: "Random Name #4",
         description: "Probably the most random thing you have ever seen!",
         image: "https://images.pexels.com/photos/811838/pexels-photo-811838.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-    }
+    },
+    {
+      id: 5,
+      name: "Random Name #5",
+      description: "Probably the most random thing you have ever seen!",
+      image: "https://images.pexels.com/photos/811838/pexels-photo-811838.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  },
+  {
+    id: 6,
+    name: "Random Name #6",
+    description: "Probably the most random thing you have ever seen!",
+    image: "https://images.pexels.com/photos/811838/pexels-photo-811838.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+}
    ]
 
     
     return (
-        
+      <Container>
         <Box 
-        p = {9}
         bgcolor='#F6F8FA'
-        >
-            <Grid container spacing={4} display="flex"  justifyContent="center">
-                
+        sx={{display:'flex',
+        flexDirection:{md:'row',sm:'column',xs:'column',lg:'row'},
+        gap: 3,
+        flexWrap:'wrap',
+        justifyContent:'center',
+        mb:4,mt:2}}
+        >    
                 {cards.map((card) => {
                 return (
-                    <Grid item  xs={6} md={4} lg={4}>
-                        <CardList card={card} />
-                    </Grid>    
+                  <Paper elevation={4} >
+                    <Grid>
+                        <CardList card={card}/>
+                    </Grid>
+                    </Paper>       
                 );
                 })}
                 
-            </Grid> 
+            
         </Box>
+        </Container>
     ) 
 }
 
 const CardList = (props)=> {
     return(
 
-    <Card sx={{ maxWidth: 500, height: 500 }}>
+    <Card sx={{width:300}}>
       <CardMedia
-        sx={{ height: 340 }}
+        sx={{ height: 320}}
         image={props.card.image}
         title="green iguana"
       />
@@ -75,7 +93,7 @@ const CardList = (props)=> {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" variant="contained" >Learn More</Button>
+        <Button size="small" variant="outlined" sx= {{mt:0,mb:1,}} >Learn More</Button>
       </CardActions>
     </Card>
      )   
